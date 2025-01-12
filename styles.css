@@ -361,16 +361,14 @@ a{
 
 .image_gallery_center{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     flex-shrink: 1;
     flex-basis: 100%;
-    flex-direction: row;
-    width: 100%;
-    min-width: 90%;
+    flex-direction: row; 
+    width: 90%;
     column-count: 2;
     justify-content: center;
-    object-fit: fill;
-    height: auto;
+    object-fit: scale-down;
 }
 
 .image_gallery_left{
@@ -457,6 +455,12 @@ a{
         font-size: 0.8em;;
     }
 
+    h1 {
+        font-size: 1.2em;
+    }
+    h2 {
+        font-size: 1em;
+    }
     .header_float{
         font-size: 0.8em;
     }
