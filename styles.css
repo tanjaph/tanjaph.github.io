@@ -1,0 +1,485 @@
+:root{
+    --topHeight: 80px;
+    --headerFloatWidth: 70px;
+    --headerFloatMargin: 2px;
+    --itemsInFloat: 2;
+    --cardHeight: 400px;
+    --cardWidth: 300px;
+    --cardBorderRadius: 15px;
+    --mainColor: rgb(135, 113, 94);
+    --complementryColor: rgba(174, 161, 151, 1.0);/*rgb(61, 139, 255);*/
+    --complementryColor2: rgb(171,182,190, 1.0);
+    --headerBackground: rgb(174, 161, 151, 0.8);
+    --backgroundColor: rgb(255, 255, 255, 0.8);
+    --cardBackground: rgba(244,244,244,1.0);
+    --cardTextColor: rgb(135, 113, 94);
+    --fontSmall: clamp(0.7em 1.2vw 2em);
+    --fontMedium: clamp(1.1em 1.5vw 1.5em);
+    --fontLarge: 4.0vw 8rem;
+}
+
+*{
+    box-sizing: border-box;    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+hr{
+    color: var(--complementryColor)
+}
+/* Body */ 
+body{
+    text-align: center;
+    background-color: var(--backgroundColor);
+    margin: auto;
+}
+
+a{
+    margin: 0px;
+    text-decoration: none;
+}
+
+/* Flex container */
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Header will have a flex basis of 100% to take up one whole column at all times*/
+.header{
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: var(--topHeight);
+    width: 100%;
+    background-color: var(--headerBackground);
+    z-index: 9999;
+
+}
+
+.centered_header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    width: 90%;
+    height: var(--topHeight);
+    z-index: 9999;
+    justify-content: space-between;
+    column-count: 2;
+    align-items: center;
+}
+
+/*Hearder front navigate to index*/
+.header_front{
+    display: flex;
+    height: 75%;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,1.0);
+    font-weight: bold;
+    font-size: larger;
+    transition: all 0.2s ease-in-out;
+}
+.header_front:hover{ 
+    transform: scale(1.06);
+}
+
+.header_nav_to_index{
+    display: flex;
+    height: var(--headerFloatWidth);
+    width: var(--headerFloatWidth);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% 50%;
+    font-size: var(--fontSmall);
+    background-color: rgb(255, 255, 255);
+    background-image: url(icons/mind-work-logo-head.png); 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 5px;
+}
+
+
+/*Div within header: contact, etc*/
+.header_float{
+    display: flex;
+    background-color: var(--mainColor);
+    z-index: 9999;
+    border-radius: 20% / 50%;
+    height: var(--headerFloatWidth);
+    width: calc((var(--headerFloatWidth) * var(--itemsInFloat))+ (var(--headerFloatMargin) *2));
+    align-items: center;
+    background-position: center;
+    transition: all 0.2s ease-in-out; 
+}
+.header_float:hover{ 
+    transform: scalex(1.03) scaley(1.06);
+}
+
+/*Contact me */
+.contact_me{
+    display: flex;
+    z-index: 9999;
+    border-radius: 20% / 50%;
+    height: calc(var(--headerFloatWidth) - (var(--headerFloatMargin)*2));
+    width: calc((var(--headerFloatWidth) * var(--itemsInFloat)) - (var(--headerFloatMargin)*2));
+    margin-left: var(--headerFloatMargin);
+    margin-right: var(--headerFloatMargin);
+    background-size: 75%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    color: rgba(255,255,255,1.0);
+    background-color: var(--complementryColor); 
+    font-size: var(--fontSmall);
+    font-weight: bold;
+}
+
+/*Top underneath header*/
+.top{
+    height: var(--topHeight);
+    width: 100%;
+
+}
+
+/*hero outer*/
+.hero_outer{
+     display: block;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     margin: auto;
+ }
+
+.hero_back_img{
+    width: 100%; 
+    background-repeat: no-repeat;
+    object-position: 0px -0px;
+}
+
+.hero_text_container{
+    position: absolute; 
+    top: 15%;   
+    text-align: center;
+    width: 100vw;
+    text-wrap: nowrap;
+    height: fit-content;
+}
+
+.hero_text{
+    position: flex;
+    margin: auto;
+    background-color: rgba(78, 65, 54, 0.25); 
+    color: rgba(223, 202, 198, 0.1); 
+    border-radius: 15px; 
+    opacity: 0.8;
+    padding: 5px;
+    width: 60%;
+
+    background-size: contain; 
+}
+
+.hero_text_text{
+    position: flex;
+    margin: auto;
+    color: rgba(255,255,255,1.0); 
+    font-size: clamp(1rem, -0.875rem + 4.333vw, 2.5rem); 
+    text-align: center;
+    opacity: 0.8;
+    width: 100%;
+    text-wrap: nowrap;
+}
+
+
+.hero_text_logo{
+    width: 50%;
+    margin-bottom: 3%;
+}
+
+.under_hero_list{
+    min-width: inherit; 
+    height: fit-content;
+    padding-left: 20px; 
+    padding-top: 10px;
+    font-size: var(--fontSmall);
+    text-align: center; 
+}
+.under_hero_centered_piece{
+    text-align: center;
+    min-width: inherit; 
+    height: fit-content;
+    padding-left: 20px; 
+    padding-top: 10px;
+    font-size: var(--fontSmall); 
+}
+
+.under_hero_text{
+    position: relative;
+    width: 42vw; 
+    height: fit-content;
+    background-color: rgba(255,255,255, 0.75);
+    color: var(--mainColor);
+    font-size: var(--fontSmall); 
+    padding-left: 20px; 
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 15px; 
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*Item within hero section*/
+.hero_div{
+    position: absolute;
+    display: block;
+    top: 25%;
+    left: 25%;
+    background: var(--logoGradient);
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    font-size: var(--fontLarge);
+    text-align: center;
+    color: lightgray;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 0 0 35px 12px var(--logoComplementryColor);
+}
+
+/*Navigation (cards)*/
+.navigation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.navigation div.navigation_01:hover {
+    outline: 1px solid var(--complementryColor2);
+}
+
+/*Card link*/
+.card_link{
+    flex: 0 0 20%;
+    margin: 15px;
+    text-decoration: none;
+    border-radius: var(--cardBorderRadius);
+}
+
+/*Card*/
+.navigation_01 {
+    display: flex;
+    height: var(--cardHeight);
+    width: calc(var(--cardWidth) - 2px);
+    border-radius: var(--cardBorderRadius);
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5;
+    background-color: var(--cardBackground);
+}
+
+/*Card top*/
+.card_top{
+    width: calc(var(--cardWidth) - 2px );
+    height: calc(var(--cardHeight) / 100 * 50);
+    border-radius: var(--cardBorderRadius)  var(--cardBorderRadius)  0%  0%;
+    margin-bottom: calc(var(--cardHeight) / 100 * 50 * -1);
+    background-color: var(--complementryColor);
+    z-index: 4;
+}
+
+/*Card picture container*/
+.card_media{
+    display: flex;
+    width: calc(var(--cardWidth) / 100 * 75);
+    height: calc(var(--cardWidth) / 100 * 75);
+    border-radius: 50%;
+    background-size: cover;
+    border-top: 5px;
+    margin-top:15px;
+    z-index: 5;
+}
+
+.card_image{
+    border-radius: 50%;
+    background-size: cover; 
+    z-index: 5;
+}
+
+/*Card header*/
+.card_header{
+    color: var(--cardTextColor);
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: var(--fontLarge);
+    font-weight: bold;
+    z-index: 5;
+}
+
+/*Card description*/
+.card_desc{
+    color: var(--cardTextColor);
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: var(--fontMedium);
+}
+
+.content{
+    flex-basis: 90%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: row;
+}
+
+.gallery_container{
+    display: flex; 
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.image_gallery_center{
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    flex-direction: row;
+    width: 100%;
+    min-width: 90%;
+    column-count: 2;
+    justify-content: center;
+    object-fit: fill;
+    height: auto;
+}
+
+.image_gallery_left{
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    flex-basis: 60%;
+    flex-direction: row;
+    min-width: 100%;
+    float: left;
+    column-count: 2;
+    justify-content: center;
+}
+
+.image_gallery_right{
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    flex-basis: 60%;
+    flex-direction: row-reverse;
+    min-width: 100%;
+    float: left;
+    column-count: 2;
+    justify-content: center;
+}
+
+.image_gallery_img{
+    width: 30%;
+    min-width: 450px;
+    height: fit-content;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.gallery_image_text{
+    width: 60%;
+    height: fit-content;
+    margin-left: 10px;
+    margin-top: 30px;
+    background-color: var(--headerBackground);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.footer_container{
+    display: block;
+    background-color: #5b5047;
+    padding-top: 8px;
+}
+
+.footer_item{
+    margin-bottom: 10px;
+    color: white;
+    border-left: 1px solid white;
+    width: fit-content;
+    height: 25px;
+    margin-left: auto;
+    margin-right:auto;
+    padding-left: 10px;
+    padding-right:10px;
+    vertical-align: middle;
+    
+}
+
+.footer_copyright{
+    margin-bottom: 10px;
+    color: white;
+    width: fit-content;
+    height: 25px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 20px;
+    vertical-align: middle;
+}
+
+@media(max-width: 1441px){
+    .hero_text{
+        left: 0vw; 
+        border-radius: 15px; 
+    }
+    .header_front{
+        font-size: 0.8em;;
+    }
+
+    .header_float{
+        font-size: 0.8em;
+    }
+
+    .under_hero_text{
+        position: relative; 
+        margin-left: 0px;
+        top: 0px;
+        width: 90vw;
+        border-radius: 0px; 
+    }
+    .hero_back_img{
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-position: 0px -0px;
+    }
+    .image_gallery_img{
+        width: 45%;
+        margin-left: 0px;
+    }
+    
+    .gallery_image_text{
+        width: 90%;
+        margin-left: 0px;
+    }
+} 
