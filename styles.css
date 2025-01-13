@@ -275,7 +275,7 @@ a{
 
 /*Card link*/
 .card_link{
-   /* flex: 0 0 20%; */
+    flex: 0 0 20%;
     margin: 15px;
     text-decoration: none;
     border-radius: var(--cardBorderRadius);
