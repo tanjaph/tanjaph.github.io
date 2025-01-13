@@ -318,7 +318,7 @@ a{
 
 .card_image{
     border-radius: 50%;
- /*   background-size: cover; */
+    max-height: 100%;
     z-index: 5;
 }
 
