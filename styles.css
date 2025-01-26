@@ -447,14 +447,18 @@ a{
 }
 
 @media(max-width: 1441px){
+    :root {
+        --topHeight: 150px;
+        --headerFloatWidth: 140px;
+        --headerFloatMargin: 2px;
+    }
     .hero_text{
         left: 0vw; 
         border-radius: 15px; 
     }
     .header_front{
-        font-size: 1.3em;;
+        font-size: 1.8em;;
     }
-
     h1 {
         font-size: 3.0em;
     }
@@ -462,7 +466,7 @@ a{
         font-size: 1.6em;
     }
     .header_float{
-        font-size: 1.3em;
+        font-size: 1.8em;
     }
     .under_hero_text{
         position: relative; 
@@ -483,7 +487,6 @@ a{
     .card_desc{
         font-size: 1.3em;
     }
-
     .hero_back_img{
         background-repeat: no-repeat;
         background-size: cover;
