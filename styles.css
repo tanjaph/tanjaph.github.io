@@ -31,6 +31,7 @@ body{
     text-align: center;
     background-color: var(--backgroundColor);
     margin: auto;
+    font-size: 1em;
 }
 
 a{
@@ -452,19 +453,18 @@ a{
         border-radius: 15px; 
     }
     .header_front{
-        font-size: 0.8em;;
+        font-size: 1.2em;;
     }
 
     h1 {
-        font-size: 1.2em;
+        font-size: 1.8em;
     }
     h2 {
-        font-size: 1em;
+        font-size: 1.6em;
     }
     .header_float{
-        font-size: 0.8em;
+        font-size: 1.2em;
     }
-
     .under_hero_text{
         position: relative; 
         margin-left: 0px;
@@ -478,12 +478,12 @@ a{
         object-position: 0px -0px;
     }
     .image_gallery_img{
-        width: 45%;
+        width: 95%;
         margin-left: 0px;
     }
-    
     .gallery_image_text{
-        width: 90%;
+        width: 95%;
         margin-left: 0px;
+        font-size: 1.5em;
     }
 } 
