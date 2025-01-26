@@ -453,17 +453,17 @@ a{
         border-radius: 15px; 
     }
     .header_front{
-        font-size: 1.2em;;
+        font-size: 1.3em;;
     }
 
     h1 {
-        font-size: 1.8em;
+        font-size: 2.0em;
     }
     h2 {
         font-size: 1.6em;
     }
     .header_float{
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
     .under_hero_text{
         position: relative; 
@@ -472,6 +472,19 @@ a{
         width: 90vw;
         border-radius: 0px; 
     }
+    .under_hero_centered_piece{
+        font-size: 1.3em;;
+    }
+    .under_hero_list{
+        font-size: 1.3em;
+    }
+    .card_header{
+        font-size: 1.6em;
+    }
+    .card_desc{
+        font-size: 1.3em;
+    }
+
     .hero_back_img{
         background-repeat: no-repeat;
         background-size: cover;
