@@ -56,7 +56,6 @@ a{
     width: 100%;
     background-color: var(--headerBackground);
     z-index: 9999;
-
 }
 
 .centered_header{
@@ -337,7 +336,7 @@ a{
 /*Card description*/
 .card_desc{
     color: var(--cardTextColor);
-    margin-top: 10%;
+    margin-top: 3%;
     margin-left: 10%;
     margin-right: 10%;
     font-size: var(--fontMedium);
@@ -457,7 +456,7 @@ a{
     }
 
     h1 {
-        font-size: 2.0em;
+        font-size: 3.0em;
     }
     h2 {
         font-size: 1.6em;
