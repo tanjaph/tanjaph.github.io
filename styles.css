@@ -96,7 +96,7 @@ a{
     border-radius: 50% 50%;
     font-size: var(--fontSmall);
     background-color: rgb(255, 255, 255);
-    background-image: url(icons/mind-work-logo-head.png); 
+    background-image: url(favicons/mind-work-logo-head.png); 
     background-position: center; 
     background-repeat: no-repeat;
     background-size: contain;
@@ -448,25 +448,34 @@ a{
 
 @media(max-width: 1441px){
     :root {
-        --topHeight: 150px;
-        --headerFloatWidth: 140px;
-        --headerFloatMargin: 2px;
+        --topHeight: 110px;
+        --headerFloatWidth: 90px;
+        --headerFloatMargin: 1px;
     }
     .hero_text{
         left: 0vw; 
         border-radius: 15px; 
     }
+    .hero_text_container{
+        display: none;
+    }
     .header_front{
         font-size: 1.8em;;
     }
+    .header_nav_to_index_text{
+        display: none;
+    }
+    .contact_me{
+        font-size: 0.85em;;
+    }
     h1 {
-        font-size: 3.0em;
+        font-size: 1.9em;
     }
     h2 {
-        font-size: 1.6em;
+        font-size: 1.5em;
     }
     .header_float{
-        font-size: 1.8em;
+        font-size: 1.7em;
     }
     .under_hero_text{
         position: relative; 
@@ -493,12 +502,12 @@ a{
         object-position: 0px -0px;
     }
     .image_gallery_img{
-        width: 95%;
+        min-width: 95%;
         margin-left: 0px;
     }
     .gallery_image_text{
         width: 95%;
         margin-left: 0px;
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 } 
